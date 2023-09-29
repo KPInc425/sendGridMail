@@ -14,6 +14,10 @@ services:
       options:
         max-file: 5
         max-size: 10m
+    env: 
+      - PORT=5174
+      - SOURCE_EMAIL='support@tmra.ai'
+      - DESTINATION_EMAILS='kpinc425@gmail.com;10geekjames@gmail.com'
     build:
       context: ./
       dockerfile: ./Dockerfile
