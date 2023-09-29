@@ -18,7 +18,7 @@ services:
       - PORT=5174
       - SOURCE_EMAIL='support@tmra.ai'
       - DESTINATION_EMAILS='kpinc425@gmail.com;10geekjames@gmail.com'
-      - SENDGRID_API_KEY
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY}
     build:
       context: ./
       dockerfile: ./Dockerfile
