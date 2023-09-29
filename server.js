@@ -6,7 +6,7 @@ const { PORT, SENDGRID_API_KEY, SOURCE_EMAIL, DESTINATION_EMAILS } = require('./
 const app = express();
 
 app.use(cors());
-
+console.log('SENDGRID_API_KEY: ', SENDGRID_API_KEY);
 sgMail.setApiKey(SENDGRID_API_KEY);
 
 app.use(express.json());
