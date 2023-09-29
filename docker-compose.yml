@@ -1,0 +1,21 @@
+version: "3.9"
+networks:
+  my-network:
+    name: commonspaces
+    driver: bridge
+    external: true 
+services:
+  tmra-sendmail-tmra-ai:
+    networks:
+      - my-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-file: 5
+        max-size: 10m
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "5174:5174"    
