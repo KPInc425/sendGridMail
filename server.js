@@ -14,6 +14,8 @@ app.use(express.json());
 console.log('DESTINATION_EMAILS: ', DESTINATION_EMAILS)
 const destinationEmails = DESTINATION_EMAILS.split(';');
 
+console.log('SOURCE_EMAIL: ', SOURCE_EMAIL);
+
 app.post('/send-email', async (req, res) => {
   const { subject, text,  html } = req.body;
   const msg = {
