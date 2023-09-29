@@ -24,9 +24,8 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - type: bind
-        source: C:/tmrasendmailcreds/copy.env
-        target: /creds/.env
+        source: C:/tmrasendmailcreds/
+        target: /creds/
         read_only: true
-      
     ports:
       - "5174:5174"    

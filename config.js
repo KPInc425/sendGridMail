@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-let sendGridKey = fs.readFileSync('/creds/.env').toString()
+let sendGridKey = fs.readFileSync('/creds/copy.env').toString()
 
 module.exports = {
   PORT: process.env.PORT || 3015,
